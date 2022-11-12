@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AlgoHub.DAL\AlgoHub.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
