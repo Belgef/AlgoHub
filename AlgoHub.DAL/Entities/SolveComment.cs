@@ -8,5 +8,5 @@ public class SolveComment : IEntity
 
     public int SolveId { get; set; }
 
-    public DateTime? CreationDate { get; set; }
+    public DateTime CreationDate { get; set; } = DateTime.Now;
 }

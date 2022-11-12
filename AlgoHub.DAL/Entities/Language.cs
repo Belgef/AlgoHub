@@ -4,9 +4,9 @@ public class Language : IEntity
 {
     public int Id { get; set; }
 
-    public string? LanguageName { get; set; }
+    public string LanguageName { get; set; } = null!;
 
-    public string? LanguageInternalName { get; set; }
+    public string LanguageInternalName { get; set; } = null!;
 
     public string? IconUrl { get; set; }
 }

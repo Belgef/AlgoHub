@@ -4,16 +4,18 @@
     {
         public int Id { get; set; }
 
-        public string? Email { get; set; }
+        public string Email { get; set; } = null!;
 
-        public string? UserName { get; set; }
+        public string UserName { get; set; } = null!;
 
         public string? FullName { get; set; }
 
-        public DateTime? CreationDate { get; set; }
+        public DateTime CreationDate { get; set; } = DateTime.Now;
 
-        public string? IconUrl { get; set; }
+        public string IconUrl { get; set; } = "account-default.png";
 
-        public UserAuthData? AuthData { get; set; }
+        public string PasswordHash { get; set; } = null!;
+
+        public string PasswordSalt { get; set; } = null!;
     }
 }

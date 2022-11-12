@@ -6,7 +6,7 @@ public class Test : IEntity
 
     public int ProblemId { get; set; }
 
-    public string? Input { get; set; }
+    public string Input { get; set; } = null!;
 
-    public string? Output { get; set; }
+    public string Output { get; set; } = null!;
 }

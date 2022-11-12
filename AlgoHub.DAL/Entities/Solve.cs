@@ -6,9 +6,9 @@ public class Solve : IEntity
 
     public int ProblemId { get; set; }
 
-    public User? Solver { get; set; }
+    public User Solver { get; set; } = null!;
 
-    public Language? Language { get; set; }
+    public Language Language { get; set; } = null!;
 
     public int Views { get; set; }
 
@@ -20,5 +20,5 @@ public class Solve : IEntity
 
     public int Memory { get; set; }
 
-    public DateTime? CreationDate { get; set; }
+    public DateTime CreationDate { get; set; } = DateTime.Now;
 }
