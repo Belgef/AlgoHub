@@ -4,9 +4,9 @@ public class ProblemComment : IEntity
 {
     public int Id { get; set; }
 
-    public User? Commenter { get; set; }
+    public int CommenterId { get; set; }
 
-    public Problem? Problem { get; set; }
+    public int ProblemId { get; set; }
 
     public DateTime? CreationDate { get; set; }
 }

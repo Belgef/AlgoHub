@@ -4,9 +4,9 @@ public class SolveComment : IEntity
 {
     public int Id { get; set; }
 
-    public User? Commenter { get; set; }
+    public int CommenterId { get; set; }
 
-    public Solve? Solve { get; set; }
+    public int SolveId { get; set; }
 
     public DateTime? CreationDate { get; set; }
 }

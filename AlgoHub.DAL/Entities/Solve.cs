@@ -4,7 +4,7 @@ public class Solve : IEntity
 {
     public int Id { get; set; }
 
-    public Problem? Problem { get; set; }
+    public int ProblemId { get; set; }
 
     public User? Solver { get; set; }
 

@@ -14,8 +14,6 @@
 
         public string? IconUrl { get; set; }
 
-        public string? PasswordHash { get; set; }
-
-        public string? PasswordSalt { get; set; }
+        public UserAuthData? AuthData { get; set; }
     }
 }
