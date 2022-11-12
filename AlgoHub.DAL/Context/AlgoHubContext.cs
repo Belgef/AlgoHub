@@ -1,5 +1,5 @@
-﻿using AlgoHub.DAL.Entities;
-using GachiHelp.DAL.Context;
+﻿using AlgoHub.DAL.Context.Configuration;
+using AlgoHub.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace AlgoHub.DAL.Context
@@ -19,10 +19,9 @@ namespace AlgoHub.DAL.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().HasIndex(u => u.UserName).IsUnique();
-            modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
-
-            modelBuilder.Seed();
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new TagConfiguration());
+            modelBuilder.ApplyConfiguration(new LessonConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
