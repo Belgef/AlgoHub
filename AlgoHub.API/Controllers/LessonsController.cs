@@ -1,5 +1,5 @@
+using AlgoHub.BLL.DTOs;
 using AlgoHub.BLL.Services.Interfaces;
-using AlgoHub.DAL.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlgoHub.API.Controllers
@@ -17,7 +17,7 @@ namespace AlgoHub.API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Lesson> GetTopPopularLessons()
+        public IEnumerable<LessonBriefDto> GetTopPopularLessons()
         {
             return _lessonService.GetTopPopularLessons(2);
         }
