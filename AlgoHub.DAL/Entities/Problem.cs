@@ -2,7 +2,7 @@
 
 public class Problem : IEntity
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     public string ProblemName { get; set; } = null!;
 

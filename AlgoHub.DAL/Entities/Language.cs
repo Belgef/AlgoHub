@@ -2,7 +2,7 @@
 
 public class Language : IEntity
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     public string LanguageName { get; set; } = null!;
 

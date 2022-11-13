@@ -2,7 +2,7 @@
 
 public class SolveComment : IEntity
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     public int CommenterId { get; set; }
 

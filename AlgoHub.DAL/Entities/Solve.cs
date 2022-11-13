@@ -2,7 +2,7 @@
 
 public class Solve : IEntity
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     public int ProblemId { get; set; }
 
