@@ -1,8 +1,6 @@
-﻿using System.Security.Cryptography;
-using AlgoHub.DAL.Entities;
+﻿using AlgoHub.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Text;
 
 namespace AlgoHub.DAL.Context.Configuration;
 
@@ -10,6 +8,13 @@ public class LessonConfiguration : IEntityTypeConfiguration<Lesson>
 {
     public void Configure(EntityTypeBuilder<Lesson> builder)
     {
+        builder.Property(l => l.Content).IsRequired().HasDefaultValue(/*lang=json*/"[{type:\"paragraph\",\"value\":\"Nothing in there yet!\"}]");
+        builder.Property(l => l.Views).IsRequired().HasDefaultValue(0);
+        builder.Property(l => l.Upvotes).IsRequired().HasDefaultValue(0);
+        builder.Property(l => l.Downvotes).IsRequired().HasDefaultValue(0);
+        builder.Property(l => l.CreationDate).IsRequired().HasDefaultValueSql("getdate()");
+        builder.Property(l => l.UpdateDate).IsRequired().HasDefaultValueSql("getdate()").ValueGeneratedOnAddOrUpdate();
+
         builder.HasData(
             new Lesson
             {
@@ -42,6 +47,12 @@ public class LessonConfiguration : IEntityTypeConfiguration<Lesson>
                 Views = 14662,
                 Upvotes = 1425,
                 Downvotes = 76
+            },
+            new Lesson
+            {
+                Id=2,
+                Title="Empty lesson",
+                AuthorId=2
             }
         );
 

@@ -1,8 +1,6 @@
-﻿using System.Security.Cryptography;
-using AlgoHub.DAL.Entities;
+﻿using AlgoHub.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Text;
 
 namespace AlgoHub.DAL.Context.Configuration;
 

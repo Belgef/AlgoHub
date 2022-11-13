@@ -13,6 +13,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasIndex(u => u.UserName).IsUnique();
         builder.HasIndex(u => u.Email).IsUnique();
 
+        builder.Property(u=>u.CreationDate).IsRequired().HasDefaultValueSql("getdate()");
+
         builder.HasData(
             new User
             {
