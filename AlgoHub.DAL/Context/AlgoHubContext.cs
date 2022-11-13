@@ -6,14 +6,15 @@ namespace AlgoHub.DAL.Context
 {
     public class AlgoHubContext : DbContext
     {
+        public DbSet<User> Users { get; set; } = null!;
         public DbSet<Lesson> Lessons { get; set; } = null!;
-        public DbSet<Problem> Problems { get; set; } = null!;
-        public DbSet<Solve> Solves { get; set; } = null!;
-        public DbSet<Test> Tests { get; set; } = null!;
-        public DbSet<ProblemComment> ProblemComments { get; set; } = null!;
-        public DbSet<SolveComment> SolveComments { get; set; } = null!;
+        //public DbSet<Problem> Problems { get; set; } = null!;
+        //public DbSet<Solve> Solves { get; set; } = null!;
+        //public DbSet<Test> Tests { get; set; } = null!;
+        //public DbSet<ProblemComment> ProblemComments { get; set; } = null!;
+        //public DbSet<SolveComment> SolveComments { get; set; } = null!;
         public DbSet<Tag> Tags { get; set; } = null!;
-        public DbSet<Language> Languages { get; set; } = null!;
+        //public DbSet<Language> Languages { get; set; } = null!;
 
         public AlgoHubContext(DbContextOptions<AlgoHubContext> options) : base(options) { }
 
@@ -22,6 +23,7 @@ namespace AlgoHub.DAL.Context
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new TagConfiguration());
             modelBuilder.ApplyConfiguration(new LessonConfiguration());
+            //modelBuilder.ApplyConfiguration(new ProblemConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
