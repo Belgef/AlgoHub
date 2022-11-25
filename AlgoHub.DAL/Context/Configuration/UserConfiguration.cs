@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AlgoHub.DAL.Context.Configuration;
 
-public class UserConfiguration : IEntityTypeConfiguration<User>
+internal class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {

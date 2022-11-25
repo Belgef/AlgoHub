@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AlgoHub.DAL.Context.Configuration;
 
-public class ProblemConfiguration : IEntityTypeConfiguration<Problem>
+internal class ProblemConfiguration : IEntityTypeConfiguration<Problem>
 {
     public void Configure(EntityTypeBuilder<Problem> builder)
     {

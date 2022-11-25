@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AlgoHub.DAL.Context.Configuration;
 
-public class TagConfiguration : IEntityTypeConfiguration<Tag>
+internal class TagConfiguration : IEntityTypeConfiguration<Tag>
 {
     public void Configure(EntityTypeBuilder<Tag> builder)
     {

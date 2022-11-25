@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AlgoHub.DAL.Context.Configuration;
 
-public class LessonConfiguration : IEntityTypeConfiguration<Lesson>
+internal class LessonConfiguration : IEntityTypeConfiguration<Lesson>
 {
     public void Configure(EntityTypeBuilder<Lesson> builder)
     {

@@ -1,9 +1,9 @@
-﻿using AlgoHub.BLL.DTOs;
+﻿using AlgoHub.DAL.Entities;
 
-namespace AlgoHub.BLL.Services.Interfaces
+namespace AlgoHub.BLL.Services.Interfaces;
+
+public interface ILessonService
 {
-    public interface ILessonService
-    {
-        public IEnumerable<LessonBriefDto> GetTopPopularLessons(int n);
-    }
+    public IEnumerable<Lesson> GetLessons();
+    public IEnumerable<Lesson> GetPopularLessons(int n);
 }

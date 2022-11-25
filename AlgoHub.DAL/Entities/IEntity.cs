@@ -1,7 +1,6 @@
-﻿namespace AlgoHub.DAL.Entities
+﻿namespace AlgoHub.DAL.Entities;
+
+public interface IEntity
 {
-    public interface IEntity
-    {
-        int? Id { get; set; }
-    }
+    int? Id { get; set; }
 }
