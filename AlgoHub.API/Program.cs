@@ -13,6 +13,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAlgoHubDbContext(builder.Configuration);
 
+builder.Services.AddS3StorageService(builder.Configuration);
+
 builder.Services.AddAutoMapper(typeof(AlgoHubProfile));
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();

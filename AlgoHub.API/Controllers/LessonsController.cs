@@ -1,5 +1,7 @@
 using AlgoHub.API.DTOs;
 using AlgoHub.API.Helpers;
+using AlgoHub.API.Services.Interfaces;
+using AlgoHub.API.ViewModels;
 using AlgoHub.BLL.Services.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -14,10 +16,13 @@ public class LessonsController : ControllerBase
 
     private readonly IMapper _mapper;
 
-    public LessonsController(ILessonService lessonService, IMapper mapper)
+    private readonly IStorageService _storageService;
+
+    public LessonsController(ILessonService lessonService, IMapper mapper, IStorageService storageService)
     {
         _lessonService = lessonService;
         _mapper = mapper;
+        _storageService = storageService;
     }
 
     [HttpGet]
@@ -27,4 +32,10 @@ public class LessonsController : ControllerBase
     [HttpGet("Popular")]
     public IActionResult GetPopularLessons()
         => Ok(_lessonService.GetPopularLessons(10).Select(_mapper.Map<LessonBriefDto>));
+
+    [HttpPost]
+    public IActionResult AddLesson(LessonCreateViewModel lesson)
+    {
+        throw new NotImplementedException();
+    }
 }

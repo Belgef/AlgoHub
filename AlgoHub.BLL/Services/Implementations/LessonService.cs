@@ -13,13 +13,13 @@ public class LessonService : ILessonService
         _unitOfWork = unitOfWork;
     }
 
-    public IEnumerable<Lesson> GetLessons()
-    {
-        return _unitOfWork.Lessons.GetAll();
-    }
+    public void AddLesson(Lesson lesson) => _unitOfWork.Lessons.Add(lesson);
 
-    public IEnumerable<Lesson> GetPopularLessons(int n)
-    {
-        return _unitOfWork.Lessons.GetPopularLessons(n);
-    }
+    public Lesson? GetLesson(int id) => _unitOfWork.Lessons.GetById(id);
+
+    public IEnumerable<Lesson> GetLessons() => _unitOfWork.Lessons.GetAll();
+
+    public IEnumerable<Lesson> GetPopularLessons(int n) => _unitOfWork.Lessons.GetPopularLessons(n);
+
+    public void RemoveLesson(Lesson lesson) => _unitOfWork.Lessons.Remove(lesson);
 }
